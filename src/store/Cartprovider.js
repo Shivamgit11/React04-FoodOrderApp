@@ -8,10 +8,10 @@ const CartProvider = (props) => {
 
 
   const addItemToCartHandler = (item,quantity) => {
-    console.log(item,quantity)
+    //console.log(item,quantity)
     //item.quantity = 1;
-    updateItems([...items,{...item,quantity:1}])
-    console.log('inside addItemTocartHandler', cartContext)
+    updateItems([...items, { ...item, quantity: parseInt(quantity) || 0 }]);
+    //console.log('inside addItemTocartHandler', cartContext)
   };
 
   const removeItemFromCartHandler = (id) => {
