@@ -13,7 +13,7 @@ const MealItemForm = props => {
         //cartctnx.items.push(props.item);
         const quantity = document.getElementById('amount_'+props.id).value
         console.log('checking quantity'+ quantity)
-        cartctnx.addItem(props.item, quantity);
+        cartctnx.addItem(props.item, Number(quantity));
         console.log('after additemtocart', cartctnx)
     }
 
@@ -21,12 +21,12 @@ const MealItemForm = props => {
         <form className={classes.form}>
             {console.log('insider render',cartctnx.items)}
             <Input label="Amount" input={{
-                id: 'amount_'+props.id,
+                // id: 'amount_' + props.id,
                 type: 'number',
                 min: '1',
                 max: '5',
-                step: '1',
-                defaulvalue: '1'
+                step:'1',
+                defaultValue: "1"
             }} />
             <button onClick={AddItemToCard}>+ Add</button>
         </form>
