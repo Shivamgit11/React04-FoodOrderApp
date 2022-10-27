@@ -8,20 +8,21 @@ const MealItemForm = props => {
     const cartctnx = useContext(CartContext);
     console.log('reinitialized cartctnx', cartctnx);
     const AddItemToCard = (event) => {
+    
         event.preventDefault();
         // update the cartcontext.item
         //cartctnx.items.push(props.item);
-        const quantity = document.getElementById('amount_'+props.id).value
-        console.log('checking quantity'+ quantity)
-        cartctnx.addItem(props.item, Number(quantity));
+        const Quantity = document.getElementById('amount_'+props.id).value
+        console.log('checking quantity'+ Quantity)
+        cartctnx.addItem(props.item, Number(Quantity));
         console.log('after additemtocart', cartctnx)
     }
 
     return (
         <form className={classes.form}>
             {console.log('insider render',cartctnx.items)}
-            <Input label="Amount" input={{
-                // id: 'amount_' + props.id,
+            <Input label="Quantity" input={{
+                id: 'amount_'+ props.id,
                 type: 'number',
                 min: '1',
                 max: '5',
