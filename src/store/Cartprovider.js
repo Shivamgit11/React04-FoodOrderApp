@@ -14,9 +14,17 @@ const CartProvider = (props) => {
   const increaseCartItemQty = (id) => {
     console.log("increaseCartItemQty", id);
     const cartItems = [...items];
-    const itemIdx = cartItems.findIndex((item) => item.id == id);
+    const itemIdx = cartItems.findIndex((item) => item.id === id);
     cartItems[itemIdx].quantity += 1;
     updateItems(cartItems);
+  };
+
+  const DecreaseCartQty = (id) => {
+    console.log("increaseCartItemQty", id);
+    const cartItems2 = [...items];
+    const itemIdx2 = cartItems2.findIndex((item) => item.id === id);
+    cartItems2[itemIdx2].quantity -= 1;
+    updateItems(cartItems2);
   };
 
   const removeItemFromCartHandler = (id) => {};
@@ -26,7 +34,8 @@ const CartProvider = (props) => {
     totalAmount: 0,
     addItem: addItemToCartHandler,
     removeItem: removeItemFromCartHandler,
-    increaseCartItemQty: increaseCartItemQty
+    increaseCartItemQty: increaseCartItemQty,
+    DecreaseCartQty: DecreaseCartQty
   };
 
   return (

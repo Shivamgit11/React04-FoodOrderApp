@@ -28,6 +28,7 @@ const Cart = (props) => {
         // </li>
         <li>
           <CartItem 
+          id={item.id}
           key={item.id}
           name={item.name}
           amount={item.amount}

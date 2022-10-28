@@ -21,7 +21,7 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={classes.actions}>
-        <button onClick={props.onRemove}>-</button>
+        <button onClick={() => cartCtx.DecreaseCartQty(props.id)}>-</button>
         <button onClick={() => cartCtx.increaseCartItemQty(props.id)}>+</button>
       </div>
     </li>
