@@ -14,7 +14,7 @@ const HeaderCartButton = props => {
         quantity = quantity + Number(item.quantity)
 
     })
-    console.log('cardctx chexk',cartCtx.items);
+    // console.log('cardctx chexk',cartCtx.items);
 
     return <button className={classes.button} onClick={props.onClick}>
         <span className={classes.icon}>

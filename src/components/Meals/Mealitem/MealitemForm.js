@@ -6,7 +6,7 @@ import CartContext from '../../../store/cart-context';
 
 const MealItemForm = props => {
     const cartctnx = useContext(CartContext);
-    console.log('reinitialized cartctnx', cartctnx);
+    // console.log('reinitialized cartctnx', cartctnx);
     const AddItemToCard = (event) => {
     
         event.preventDefault();
@@ -15,12 +15,12 @@ const MealItemForm = props => {
         const quantity = document.getElementById('amount_'+props.id).value
         console.log('checking quantity'+ quantity)
         cartctnx.addItem(props.item, Number(quantity));
-        console.log('after additemtocart', cartctnx)
+        // console.log('after additemtocart', cartctnx)
     }
 
     return (
         <form className={classes.form}>
-            {console.log('insider render',cartctnx.items)}
+            {/* {console.log('insider render',cartctnx.items)} */}
             <Input label="Quantity" input={{
                 id: 'amount_'+ props.id,
                 type: 'number',

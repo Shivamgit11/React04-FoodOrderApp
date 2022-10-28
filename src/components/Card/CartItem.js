@@ -1,11 +1,14 @@
 import classes from './CartItem.module.css';
 import CartContext from '../../store/cart-context';
+import { useContext } from 'react';
 
 
 const CartItem = (props) => {
   
   const price = `₹${props.price.toFixed(2)}`;
-  console.log("Checking Quantitiy", props);
+  console.log("inside CartItem", props);
+
+  const cartCtx = useContext(CartContext);
 
   return (
     <li className={classes['cart-item']}>
@@ -18,8 +21,8 @@ const CartItem = (props) => {
         </div>
       </div>
       <div className={classes.actions}>
-        <button onClick={props.onRemove}>−</button>
-        <button onClick={props.onAdd}>+</button>
+        <button onClick={props.onRemove}>-</button>
+        <button onClick={() => cartCtx.increaseCartItemQty(props.id)}>+</button>
       </div>
     </li>
   );
