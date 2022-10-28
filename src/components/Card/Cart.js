@@ -16,9 +16,7 @@ const Cart = (props) => {
 
   let checkItem = carycntx.items.length > 0;
 
-  const cartItemRemoveHandler = id => {};
-
-  const cartItemAddHandler = item => {};
+  
 
 
 

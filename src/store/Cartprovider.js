@@ -15,7 +15,7 @@ const CartProvider = (props) => {
   };
 
   const removeItemFromCartHandler = (id) => {
-
+        
   };
 
   const cartContext = {

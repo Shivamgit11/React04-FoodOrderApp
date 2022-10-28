@@ -1,6 +1,9 @@
 import classes from './CartItem.module.css';
+import CartContext from '../../store/cart-context';
+
 
 const CartItem = (props) => {
+  
   const price = `₹${props.price.toFixed(2)}`;
 
   return (
