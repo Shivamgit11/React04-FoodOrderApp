@@ -12,9 +12,9 @@ const MealItemForm = props => {
         event.preventDefault();
         // update the cartcontext.item
         //cartctnx.items.push(props.item);
-        const Quantity = document.getElementById('amount_'+props.id).value
-        console.log('checking quantity'+ Quantity)
-        cartctnx.addItem(props.item, Number(Quantity));
+        const quantity = document.getElementById('amount_'+props.id).value
+        console.log('checking quantity'+ quantity)
+        cartctnx.addItem(props.item, Number(quantity));
         console.log('after additemtocart', cartctnx)
     }
 
