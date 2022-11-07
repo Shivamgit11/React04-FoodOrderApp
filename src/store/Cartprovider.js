@@ -22,8 +22,8 @@ const CartProvider = (props) => {
   const DecreaseCartQty = (id) => {
     console.log("increaseCartItemQty", id);
     const cartItems2 = [...items];
-    const itemIdx2 = cartItems2.findIndex((item) => item.id === id);
-    cartItems2[itemIdx2].quantity -= 1;
+    const itemIdx = cartItems2.findIndex((item) => item.id === id);
+    cartItems2[itemIdx].quantity -= 1;
     updateItems(cartItems2);
   };
 

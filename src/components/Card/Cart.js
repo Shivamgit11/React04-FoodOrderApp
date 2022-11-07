@@ -8,11 +8,20 @@ import CartItem from "./CartItem";
 
 const Cart = (props) => {
   const carycntx = useContext(CartContext);
-
+  
+  // let quantity = 0;
   let totalAmount = 0;
   carycntx.items.map((item) => {
+    // if(item.quantity < 0) {
+    //   alert('Quantity should more than one')
+    // }
     totalAmount = totalAmount + item.price*item.quantity;
+    // quantity += quantity + item.quantity;
   });
+
+  if(totalAmount < 0) {
+    alert("Amount should be in positive formate");
+  }
 
   let checkItem = carycntx.items.length > 0;
 
@@ -31,7 +40,7 @@ const Cart = (props) => {
           id={item.id}
           key={item.id}
           name={item.name}
-          amount={item.amount}
+          // amount={item.amount}
           price={item.price}
           quantity={item.quantity}
           />

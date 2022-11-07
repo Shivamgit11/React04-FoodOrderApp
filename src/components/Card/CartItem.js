@@ -9,6 +9,7 @@ const CartItem = (props) => {
   console.log("inside CartItem", props);
 
   const cartCtx = useContext(CartContext);
+  
 
   return (
     <li className={classes['cart-item']}>
